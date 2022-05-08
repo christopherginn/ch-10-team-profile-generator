@@ -8,6 +8,16 @@ function addEmployee() {
     inquirer
         .prompt([
             {
+                type: 'list',
+                message: 'What is this employee\'s position?',
+                name: 'position',
+                choices: [
+                    {name:'Manager', value:'manager'},
+                    {name:'Engineer', value:'engineer'},
+                    {name:'Intern', value:'intern'}
+                ]
+            },
+            {
                 type: 'input',
                 message: 'Name?',
                 name: 'name'
