@@ -16,8 +16,10 @@ return `
     `;
 }
 
-function createEnigneerCards(engineer){
-    `<div class="card employee-card">
+function createEnigneerCards(engineers){
+    const markup = engineers.map((engineer) => {
+        return `
+    <div class="card employee-card">
           <div class="card-header">
               <h2 class="card-title">${engineer.name}</h2>
               <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
@@ -30,9 +32,11 @@ function createEnigneerCards(engineer){
               </ul>
           </div>
       </div>`
+    });
+    return markup.join(",");
 }
 
-function createInternCards(intern){
+function createInternCards(interns){
     const markup = interns.map((intern) => {
     return `
         <div class="card employee-card">
@@ -53,14 +57,10 @@ function createInternCards(intern){
 }
 
 function createEmployeeCards(employees) {
-    return ``
-    renderManagerCard(employees.manager);
-    for (i=0; i < employees.engineers.length; i++){
-        createEnigneerCards(employees.engineers[i])
-    };
-    for (i=0; i < employees.interns.length; i++){
-        createInternCards(employees.interns[i])
-    };
+    return `
+    ${renderManagerCard(employees.manager)};
+    ${createEnigneerCards(employees.engineers)}
+    ${createInternCards(employees.interns)}`
 }
 
 function render(employees){
