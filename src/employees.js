@@ -1,8 +1,8 @@
 function renderManagerCard(manager){
     return `
         
-            <div class="card employee-card">
-                <div class="card-header">
+            <div class="card m-2">
+                <div class="card-header bg-danger text-light">
                     <h2 class="card-title">${manager.name}</h2>
                     <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
                 </div>
@@ -22,8 +22,8 @@ function createEnigneerCards(engineers){
     const markup = engineers.map((engineer) => {
         return `
             
-                <div class="card employee-card">
-                    <div class="card-header">
+                <div class="card m-2">
+                    <div class="card-header bg-primary text-light">
                         <h2 class="card-title">${engineer.name}</h2>
                         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
                     </div>
@@ -45,8 +45,8 @@ function createInternCards(interns){
     const markup = interns.map((intern) => {
         return `
             
-                <div class="card employee-card">
-                    <div class="card-header">
+                <div class="card m-2">
+                    <div class="card-header bg-success text-light">
                         <h2 class="card-title">${intern.name}</h2>
                         <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
                     </div>
@@ -81,14 +81,13 @@ function render(employees){
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
             <title>Employees</title>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-            <link rel="stylesheet" href="style.css">
             <script src="https://kit.fontawesome.com/c502137733.js"></script>
         </head>
 
         <body>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 jumbotron mb-3 team-header">
+                    <div class="col-12 jumbotron mb-3 text-light bg-secondary">
                         <h1 class="text-center">My Team</h1>
                     </div>
                 </div>
@@ -96,7 +95,7 @@ function render(employees){
 
             <div class="container">
                 <div class="row">
-                    <div class="employee-main col-12 d-flex flex-wrap justify-content-center">
+                    <div class="col-12 d-flex flex-wrap justify-content-center">
                         ${createEmployeeCards(employees)}
                     </div>
                 </div>
