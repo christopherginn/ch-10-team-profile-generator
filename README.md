@@ -33,7 +33,7 @@
 
   [GitHub repository](https://github.com/christopherginn/ch-10-team-profile-generator)
 
-  Here is a screen capture of a demo:
+  Here is a screen capture of a demo: [Video Demo](https://drive.google.com/file/d/1lHoMvjMl5atRFg9N9U9jGALi_I4t6VME/view?usp=sharing)
   
   <img src="./demo_images/screenshot.png" width="50%" height="50%">
   
